@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raphael Stanislas — AI Consulting</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif; color: #e2e8f0; background: #020617; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+
+  .lang-switch { text-align: right; padding: 16px 24px 0; max-width: 740px; margin: 0 auto; }
+  .lang-switch a { color: #38bdf8; text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px; }
+  .lang-switch a:hover { text-decoration: underline; }
+
+  .hero { padding: 72px 24px 72px; text-align: center; }
+  .hero .wrap { max-width: 680px; }
+  .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; color: #fff; margin-bottom: 20px; }
+  .hero h1 span { background: linear-gradient(135deg, #38bdf8, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero .one-liner { font-size: 1.15rem; color: #64748b; margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .btn { display: inline-block; background: #0284c7; color: #fff; padding: 16px 40px; border-radius: 10px; text-decoration: none; font-size: 1rem; font-weight: 700; transition: all 0.2s; box-shadow: 0 4px 20px rgba(2,132,199,0.25); }
+  .btn:hover { background: #0369a1; transform: translateY(-1px); }
+  .btn-note { font-size: 0.78rem; color: #475569; margin-top: 12px; }
+
+  .divider { height: 1px; background: #1e293b; margin: 0 auto; max-width: 740px; }
+
+  .section { padding: 64px 0; }
+  .section h2 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 32px; }
+  .section h2.center { text-align: center; }
+
+  .pains { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pain { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 16px 18px; font-size: 0.95rem; color: #94a3b8; display: flex; align-items: center; gap: 12px; }
+  .pain::before { content: ""; flex-shrink: 0; width: 8px; height: 8px; background: #f87171; border-radius: 50%; }
+
+  .offers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .offer { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 24px; transition: border-color 0.2s; }
+  .offer:hover { border-color: #0284c7; }
+  .offer h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .offer p { font-size: 0.88rem; color: #64748b; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .step { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 24px; }
+  .step .step-n { font-size: 0.7rem; font-weight: 700; color: #0284c7; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
+  .step h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .step p { font-size: 0.85rem; color: #64748b; }
+
+  .about { display: flex; gap: 32px; align-items: center; }
+  .about-photo { flex-shrink: 0; width: 120px; height: 120px; background: #1e293b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #475569; font-size: 0.75rem; }
+  .about-text p { font-size: 0.95rem; color: #94a3b8; margin-bottom: 8px; }
+  .about-text p strong { color: #fff; }
+
+  .final-cta { text-align: center; padding: 72px 24px; border-top: 1px solid #1e293b; }
+  .final-cta h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+  .final-cta p { color: #64748b; margin-bottom: 28px; font-size: 1rem; }
+
+  footer { text-align: center; padding: 20px; font-size: 0.75rem; color: #334155; }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.8rem; }
+    .hero { padding: 48px 20px 48px; }
+    .pains, .offers, .steps { grid-template-columns: 1fr; }
+    .about { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="lang-switch"><a href="fr.html">FR</a></div>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Your team wastes hours on repetitive work. <span>I make it disappear.</span></h1>
+    <p class="one-liner">AI consulting for SMBs. I find what slows you down and automate it.</p>
+    <a href="https://wa.me/YOURNUMBER" class="btn">Book a free 30-min call</a>
+    <p class="btn-note">No commitment. We figure out if I can help.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <div class="wrap">
+    <h2 class="center">Sound familiar?</h2>
+    <div class="pains">
+      <div class="pain">Data copied by hand between systems</div>
+      <div class="pain">Client follow-ups that fall through the cracks</div>
+      <div class="pain">Weekly reports compiled manually every Monday</div>
+      <div class="pain">No dashboard — no visibility on what's happening</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <div class="wrap">
+    <h2 class="center">What I do</h2>
+    <div class="offers">
+      <div class="offer">
+        <h3>AI Audit</h3>
+        <p>I map your workflows, find the time sinks, and deliver a concrete action plan with priorities.</p>
+      </div>
+      <div class="offer">
+        <h3>Automation</h3>
+        <p>Emails, reports, data entry, invoices, follow-ups — I build systems that run on their own. No monthly subscription.</p>
+      </div>
+      <div class="offer">
+        <h3>Custom tools</h3>
+        <p>Dashboards, internal apps, tracking systems. Built for your team. You own everything.</p>
+      </div>
+      <div class="offer">
+        <h3>AI Training</h3>
+        <p>I teach your team to use AI tools on their actual work. Not theory — real use cases, real results.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap">
+    <h2 class="center">How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">Step 1 — Free</div>
+        <h3>We talk</h3>
+        <p>30 minutes. You tell me what slows you down. I tell you what I can automate.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">Step 2</div>
+        <h3>I audit</h3>
+        <p>I look at your operations in detail. You get a report with the top priorities and what can be automated.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">Step 3</div>
+        <h3>I build</h3>
+        <p>I set everything up. Your team gets trained. You own the solution. No ongoing fees.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section">
+  <div class="wrap">
+    <div class="about">
+      <div class="about-photo">[Photo]</div>
+      <div class="about-text">
+        <h2>Raphael Stanislas</h2>
+        <p><strong>I build things with AI.</strong> Internal tools, automation pipelines, dashboards. I present KPIs to CTOs every week — not code, results.</p>
+        <p>If your business runs on manual work that could be automated, I'm the person who makes it happen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="final-cta">
+  <h2>30 minutes. That's all it takes to know.</h2>
+  <p>Free call. No pitch. Just an honest look at where you're losing time.</p>
+  <a href="https://wa.me/YOURNUMBER" class="btn">Let's talk on WhatsApp</a>
+  <p class="btn-note">Or email me at raphael@stanislas.org</p>
+</div>
+
+<footer>Raphael Stanislas — AI Consulting and Automation</footer>
+
+</body>
+</html>
