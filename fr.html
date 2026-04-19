@@ -125,14 +125,15 @@
   }
   .journey-item {
     position: relative;
-    padding: 22px 26px; background: var(--bg-card);
+    padding: 26px 28px; background: var(--bg-card);
     border: 1px solid var(--border); border-radius: 14px;
-    margin-bottom: 22px;
-    opacity: 0; transform: translateX(-24px);
-    transition: opacity 0.7s cubic-bezier(0.2,0.8,0.2,1),
-                transform 0.7s cubic-bezier(0.2,0.8,0.2,1),
+    margin-bottom: 56px;
+    opacity: 0; transform: translateX(-30px);
+    transition: opacity 0.6s cubic-bezier(0.2,0.8,0.2,1),
+                transform 0.6s cubic-bezier(0.2,0.8,0.2,1),
                 border-color 0.3s, box-shadow 0.3s;
   }
+  .journey-item:last-child { margin-bottom: 0; }
   .journey-item.visible { opacity: 1; transform: translateX(0); }
   .journey-item:hover {
     border-color: rgba(250,204,21,0.45);
@@ -374,12 +375,11 @@
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        const delay = [...e.target.parentNode.children].indexOf(e.target) * 120;
-        setTimeout(() => e.target.classList.add('visible'), delay);
+        e.target.classList.add('visible');
         obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.55, rootMargin: '0px 0px -10% 0px' });
   document.querySelectorAll('.journey-item').forEach(el => obs.observe(el));
 </script>
 
